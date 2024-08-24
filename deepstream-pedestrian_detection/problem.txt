@@ -1,0 +1,22 @@
+############################################################
+Q1: make file error
+
+deepstream_test5_app_main.c:23:10: fatal error: gst/gst.h: No such file or directory
+   23 | #include <gst/gst.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+make: *** [Makefile:68: deepstream_test5_app_main.o] Error 1
+
+A1: $ sudo apt-get install libjson-glib-dev
+
+############################################################
+Q2: make file error
+
+./../apps-common/src/deepstream_sink_bin.c:32:10: fatal error: gst/rtsp-server/rtsp-server.h: No such file or directory
+   32 | #include <gst/rtsp-server/rtsp-server.h>
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Makefile:68: ../../apps-common/src/deepstream_sink_bin.o] Error 1
+
+A2: $ sudo apt-get install libgstrtspserver-1.0-dev
+############################################################
