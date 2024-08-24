@@ -19,7 +19,7 @@ Follow the steps below to install DeepStream 6.1 on your Jetson device:
 
 For detailed installation instructions, refer to the [DeepStream Quickstart Guide](https://docs.nvidia.com/metropolis/deepstream/6.1/dev-guide/text/DS_Quickstart.html).
 
-### VST(Video Storage Toolkit)Installation
+### VST(Video Storage Toolkit) Installation
 
 The Video Storage Toolkit (VST) is essential for managing video streams. To install VST with Metropolis Microservices for Jetson:
 
@@ -29,9 +29,10 @@ The Video Storage Toolkit (VST) is essential for managing video streams. To inst
 
 To start the application, navigate to the `ai_nvr` directory and run:
 
+```markdown
 ```bash
-cd ai_nvr
-# For Orin AGX
+cd ai_nvr  
+# For Orin AGX  
 sudo docker compose -f compose_agx.yaml up -d --force-recreate
 
 # For Orin NX16
