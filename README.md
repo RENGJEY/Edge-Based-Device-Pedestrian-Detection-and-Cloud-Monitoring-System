@@ -12,10 +12,10 @@ This project is compatible with the NVIDIA Jetson platform. The following steps 
 
 Follow the steps below to install DeepStream 6.1 on your Jetson device:
 
-1. **Install Jetson SDK Components**
-2. **Install Dependencies**
-3. **Install the DeepStream SDK**
-4. **Run `deepstream-app` (the reference application)**
+1-1. **Install Jetson SDK Components**
+1-2. **Install Dependencies**
+1-3. **Install the DeepStream SDK**
+1-4. **Run `deepstream-app` (the reference application)**
 
 For detailed installation instructions, refer to the [DeepStream Quickstart Guide](https://docs.nvidia.com/metropolis/deepstream/6.1/dev-guide/text/DS_Quickstart.html).
 
@@ -23,13 +23,14 @@ For detailed installation instructions, refer to the [DeepStream Quickstart Guid
 
 The Video Storage Toolkit (VST) is essential for managing video streams. To install VST with Metropolis Microservices for Jetson:
 
-1. **Install Platform Services**
-2. **Install Application Bundle**
-3. **Run IVA Application**
+2-1. **Install Platform Services**
+2-2. **Install Application Bundle**
+2-3. **Run IVA Application**
 
 To start the application, navigate to the `ai_nvr` directory and run:
 
 ```bash
+cd ai_nvr
 # For Orin AGX
 sudo docker compose -f compose_agx.yaml up -d --force-recreate
 
