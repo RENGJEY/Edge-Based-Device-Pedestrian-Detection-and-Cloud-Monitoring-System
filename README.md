@@ -29,11 +29,13 @@ The Video Storage Toolkit (VST) is essential for managing video streams. To inst
 
 To start the application, navigate to the `ai_nvr` directory and run:
 
-```markdown
 ```bash
-cd ai_nvr  
-# For Orin AGX  
+cd ai_nvr
+```
+```bash
+# For Orin AGX
 sudo docker compose -f compose_agx.yaml up -d --force-recreate
 
 # For Orin NX16
 sudo docker compose -f compose_nx.yaml up -d --force-recreate
+```
