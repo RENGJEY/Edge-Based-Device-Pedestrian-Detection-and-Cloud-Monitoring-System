@@ -8,24 +8,24 @@ This project is focused on enhancing pedestrian safety by deploying an advanced 
 
 This project is compatible with the NVIDIA Jetson platform. The following steps outline the installation process for DeepStream SDK, VST, and Azure IoT Hub.
 
-### 1. DeepStream SDK Installation
+### DeepStream SDK Installation
 
 Follow the steps below to install DeepStream 6.1 on your Jetson device:
 
-1-1. **Install Jetson SDK Components**
-1-2. **Install Dependencies**
-1-3. **Install the DeepStream SDK**
-1-4. **Run `deepstream-app` (the reference application)**
+1. **Install Jetson SDK Components**
+2. **Install Dependencies**
+3. **Install the DeepStream SDK**
+4. **Run `deepstream-app` (the reference application)**
 
 For detailed installation instructions, refer to the [DeepStream Quickstart Guide](https://docs.nvidia.com/metropolis/deepstream/6.1/dev-guide/text/DS_Quickstart.html).
 
-### 2. Video Storage Toolkit Installation
+### VST(Video Storage Toolkit)Installation
 
 The Video Storage Toolkit (VST) is essential for managing video streams. To install VST with Metropolis Microservices for Jetson:
 
-2-1. **Install Platform Services**
-2-2. **Install Application Bundle**
-2-3. **Run IVA Application**
+1. **Install Platform Services**
+2. **Install Application Bundle**
+3. **Run IVA Application**
 
 To start the application, navigate to the `ai_nvr` directory and run:
 
