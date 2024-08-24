@@ -35,7 +35,8 @@ cd ai_nvr
 ```bash
 # For Orin AGX
 sudo docker compose -f compose_agx.yaml up -d --force-recreate
-
+```
+```bash
 # For Orin NX16
 sudo docker compose -f compose_nx.yaml up -d --force-recreate
 ```
