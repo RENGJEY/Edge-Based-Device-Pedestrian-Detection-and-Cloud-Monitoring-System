@@ -32,11 +32,11 @@ To start the application, navigate to the `ai_nvr` directory and run:
 ```bash
 cd ai_nvr
 ```
-```bash
-# For Orin AGX
-sudo docker compose -f compose_agx.yaml up -d --force-recreate
-```
-```bash
-# For Orin NX16
-sudo docker compose -f compose_nx.yaml up -d --force-recreate
-```
+- If on Orin AGX:
+    ```bash
+    sudo docker compose -f compose_agx.yaml down --remove-orphans
+    ```
+- If on Orin NX16:
+    ```bash
+    sudo docker compose -f compose_nx.yaml up -d --force-recreate
+    ```
