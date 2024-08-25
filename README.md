@@ -55,8 +55,13 @@ To integrate Azure IoT Hub for cloud-based monitoring:
 
    Navigate to your IoT Hub page on the Azure portal, select "IoT Edge" from the left menu, and follow the instructions to create a new IoT Edge device.
    After creation, the device will appear in the device list.
+   
    ![Screenshot of the application](./example_img/1.png)
 
+   After clicking the device ID below, you can view the detailed information of the device, such as the main connection string.
+
+    ![Screenshot of the application](./example_img/2.png)
+    p.s. You need to obtain the "primary connect string" of the device and paste it into the config file of deepstream.
 
 
 
