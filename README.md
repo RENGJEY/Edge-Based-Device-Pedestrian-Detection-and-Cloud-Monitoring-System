@@ -48,12 +48,13 @@ Now you should be able to test VST and use it successfully
 To integrate Azure IoT Hub for cloud-based monitoring:
 
 1. **Create an Azure IoT Hub**
-   For detailed instructions, refer to the [Create an Azure IoT hub](https://learn.microsoft.com/en-us/azure/iot-hub/create-hub?tabs=portal).
+   -For detailed instructions, refer to the [Create an Azure IoT hub](https://learn.microsoft.com/en-us/azure/iot-hub/create-hub?tabs=portal).
    
 3. **Create an IoT Edge Device**
-   Navigate to your IoT Hub page on the Azure portal, select "IoT Edge" from the left menu, and follow the instructions to create a new IoT Edge device.
+   -*Navigate to your IoT Hub page on the Azure portal, select "IoT Edge" from the left menu, and follow the instructions to create a new IoT Edge device.
    After creation, the device will appear in the device list.
-   ![Logo](https://drive.google.com/file/d/1dYt_VvQiKw9xpe2paln2ONW8QcOSyFrN/view?usp=sharing)
+   ![Screenshot of the application](./example_img/1.png)
+
 
 
 
