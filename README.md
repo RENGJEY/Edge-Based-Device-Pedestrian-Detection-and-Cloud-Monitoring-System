@@ -53,12 +53,12 @@ To integrate Azure IoT Hub for cloud-based monitoring:
    
 2. **Create an IoT Edge Device**
 
-   Navigate to your IoT Hub page on the Azure portal, select "IoT Edge" from the left menu, and follow the instructions to create a new IoT Edge device.  
+   Login to Azure IoT Hub, select "IoT Edge" from the left menu, and follow the instructions to create a new IoT Edge device.  
    After creation, the device will appear in the device list.
 
    ![Screenshot of the application](./example_img/1.png)
 
-   After clicking the device ID, you can view the detailed information of the device, such as the main connection string.
+   You can view the detailed information of the device, such as the primary connect string connect string.
 
    ![Screenshot of the application](./example_img/2.png)
 
@@ -68,6 +68,15 @@ To integrate Azure IoT Hub for cloud-based monitoring:
 
    ```bash
    msg-broker-conn-str=”primary connect string”
+   ```
+
+3. **Azure Cosmos DB**
+
+   Since Azure IoT Hub is not a persistent storage solution, a solution needs to be developed to periodically extract data from IoT Hub
+   and save the data to a persistent storage service, such as Azure Cosmos DB.
+
+   For detailed instructions, refer to the [Create an Azure Cosmos DB](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/quickstart-portal).
+
 
 
 
