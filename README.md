@@ -21,9 +21,11 @@ For detailed installation instructions, refer to the [DeepStream Quickstart Guid
 
 ### VST (Video Storage Toolkit) Installation
 
-The Video Storage Toolkit (VST) is essential for managing video streams. To install VST with Metropolis Microservices for Jetson:
+The Video Storage Toolkit (VST) is essential for managing video streams.
 
-Please refer to the [Video Storage Toolkit Quickstart Guide](https://docs.nvidia.com/moj/setup/quick-start.html).
+To install VST with Metropolis Microservices for Jetson:
+
+Please refer to the [Video Storage Toolkit Quickstart Guide](https://docs.nvidia.com/moj/setup/quick-start.html) install.
 
 1. **Install Platform Services**
 2. **Install Application Bundle**
@@ -53,7 +55,7 @@ To integrate Azure IoT Hub for cloud-based monitoring:
    
 2. **Create an IoT Edge Device**
 
-   Login to Azure IoT Hub, select "IoT Edge" from the left menu, and follow the instructions to create a new IoT Edge device.  
+   Login to Azure IoT Hub, select "IoT Edge" from the left menu, and create a new IoT Edge device.  
    After creation, the device will appear in the device list.
 
    ![Screenshot of the application](./example_img/1.png)
