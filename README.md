@@ -53,7 +53,8 @@ To integrate Azure IoT Hub for cloud-based monitoring:
 3. **Create an IoT Edge Device**
    Navigate to your IoT Hub page on the Azure portal, select "IoT Edge" from the left menu, and follow the instructions to create a new IoT Edge device.
    After creation, the device will appear in the device list.
-   ![Logo]([https://example.com/logo.png](https://drive.google.com/file/d/1dYt_VvQiKw9xpe2paln2ONW8QcOSyFrN/view?usp=sharing))
+   ![Logo](https://drive.google.com/file/d/1dYt_VvQiKw9xpe2paln2ONW8QcOSyFrN/view?usp=sharing)
+
 
 
 
