@@ -19,7 +19,7 @@ Follow the steps below to install DeepStream 6.1 on your Jetson device:
 
 For detailed installation instructions, refer to the [DeepStream Quickstart Guide](https://docs.nvidia.com/metropolis/deepstream/6.1/dev-guide/text/DS_Quickstart.html).
 
-### VST(Video Storage Toolkit) Installation
+### VST (Video Storage Toolkit) Installation
 
 The Video Storage Toolkit (VST) is essential for managing video streams. To install VST with Metropolis Microservices for Jetson:
 
@@ -62,9 +62,9 @@ To integrate Azure IoT Hub for cloud-based monitoring:
 
    ![Screenshot of the application](./example_img/2.png)
 
-   **Note:** You need to obtain the "primary connect string" of the device and paste it into the config file of DeepStream.
+   **Note:** You need to obtain "primary connect string" of the device and paste it into the config file.
 
-   Update the config file `./deepstream-pedestrian_detection/configs/test5_config_file_src_infer_azure_iotedge.txt`:
+   Update  config file: `./deepstream-pedestrian_detection/configs/test5_config_file_src_infer_azure_iotedge.txt`
 
    ```bash
    msg-broker-conn-str=”primary connect string”
@@ -77,10 +77,71 @@ To integrate Azure IoT Hub for cloud-based monitoring:
 
    For detailed instructions, refer to the [Create an Azure Cosmos DB](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/quickstart-portal).
 
+## How to Run
 
+1. **Download and Enter the Project Directory**
 
+   Clone the repository and navigate to the project directory:
 
+   ```bash
+   git clone https://github.com/RENGJEY/pedestrian-detection-system
+   cd pedestrian-detection-system/deepstream-pedestrian_detection
+   ```
 
+2. **Set the CUDA version in the Makefile**
 
+    modify`./deepstream-pedestrian_detection/configs/Makefile`
 
+    You can use the 'jtop' command to find the CUDA version first.
 
+    ![Screenshot of the application](./example_img/6.png)
+
+3. **Execute the command**
+
+    ```bash
+   sudo make
+   ```
+
+4. **Simple test of video inference for pedestrian detection**
+
+    ```bash
+   ./deepstream-test5-app -c configs/ test5_config_file_src_infer.txt -p 1 -t
+   ```
+
+5. **Streaming image inference for pedestrian detection and integrate into Azure IOT Center**
+
+    Modify the config file. Please fill in the source, sink block, etc. correctly.
+    
+    If you want to use kafka or Azure MQTT, you need to add the connection string to the config file, as shown in the figure.
+
+    ![Screenshot of the application](./example_img/3.png)
+
+    Execute the command
+
+    ```bash
+   ./deepstream-test5-app -c configs/test5_config_file_src_infer_azure_iotedge.txt -p 1 -t
+   ```
+
+6. **Add RTSP port to VST**
+
+    Add a detected RTSP port in VST `rtsp://localhost:8554/dstest`
+
+    ![Alt Text](./example_img/video1.gif)
+
+7. **Azure IoT Hub check message**
+
+    In addition to checking the message from the data manager, you can also write a program to search for it. Use 'query_items' method in the Azure Cosmos DB Python SDK to execute SQL search from the 'temps container'.
+
+    **Note:** You need to obtain the credentials for CosmosDB, including the URL and primary key. 
+    Add these to `azure_subscriber.ipynb `.
+
+    ![Screenshot of the application](./example_img/5.png)
+
+## References
+
+- [DeepStream Quickstart Guide](https://docs.nvidia.com/metropolis/deepstream/6.1/dev-guide/text/DS_Quickstart.html)
+- [Video Storage Toolkit Quickstart Guide](https://docs.nvidia.com/moj/setup/quick-start.html)
+- [Create an Azure IoT hub](https://learn.microsoft.com/en-us/azure/iot-hub/create-hub?tabs=portal)
+- [Create an Azure Cosmos DB](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/quickstart-portal)
+
+    
