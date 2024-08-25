@@ -61,9 +61,16 @@ To integrate Azure IoT Hub for cloud-based monitoring:
    After clicking the device ID below, you can view the detailed information of the device, such as the main connection string.
 
     ![Screenshot of the application](./example_img/2.png)
+   
     p.s. You need to obtain the "primary connect string" of the device and paste it into the config file of deepstream.
 
+    Update config file "./deepstream-pedestrian_detection/configs/test5_config_file_src_infer_azure_iotedge.txt"
 
+   msg-broker-conn-str=”primary connect string”
+
+   ![Screenshot of the application](./example_img/3.png)
+
+   msg-broker-conn-str=”Main connection string”
 
 
 
